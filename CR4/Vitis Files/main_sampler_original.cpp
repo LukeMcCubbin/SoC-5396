@@ -497,37 +497,34 @@ int main() {
 	   uart.disp("\n\r");
 
 
-	   if((x >= -0.005) && (x <= 0.005) && (y >= -0.005) && (y <= 0.005)){
-	       	   led_p->write(1, 1);
-	       	   led_p->write(0, 2);
-	       	   led_p->write(0, 3);
-	       	   led_p->write(0, 4);
-	       	   sleep_ms(100);
-	          }
-	         // 90 degrees
-	         if((x >= 0.005) && (x <= 0.020) && (y >= -0.005) && (y <= 0.005)){
-	       	  led_p->write(1, 2);
-	       	  led_p->write(0, 1);
-	       	  led_p->write(0, 3);
-	       	  led_p->write(0, 4);
-	       	  sleep_ms(100);
-	         }
-	         // 180 degrees
-	         if((x >= 0.005) && (x <= 0.020) && (y >= 0.005) && (y <= 0.020)){
-	       	  led_p->write(1, 3);
-	       	  led_p->write(0, 1);
-	       	  led_p->write(0, 2);
-	       	  led_p->write(0, 4);
-	       	  sleep_ms(100);
-	         }
-	         // 270 degrees
-	         if((x >= -0.005) && (x <= 0.005) && (y >= 0.005) && (y <= 0.020)){
-	       	  led_p->write(1, 4);
-	       	  led_p->write(0, 1);
-	       	  led_p->write(0, 2);
-	       	  led_p->write(0, 3);
-	       	  sleep_ms(100);
-	         }
+       if((x >= -0.005) && (x <= 0.005) && (y >= -0.005) && (y <= 0.005)){
+    	   led_p->write(1, 1);
+    	   led_p->write(0, 2);
+    	   led_p->write(0, 3);
+    	   led_p->write(0, 4);
+    	   sleep_ms(100);
+       }
+      if((x >= 0.005) && (x <= 0.020) && (y >= -0.005) && (y <= 0.005)){
+    	  led_p->write(0, 1);
+    	  led_p->write(1, 2);
+    	  led_p->write(0, 3);
+    	  led_p->write(0, 4);
+    	  sleep_ms(100);
+      }
+      if((x >= 0.005) && (x <= 0.020) && (y >= 0.005) && (y <= 0.020)){
+    	  led_p->write(0, 1);
+    	  led_p->write(0, 2);
+    	  led_p->write(1, 3);
+    	  led_p->write(0, 4);
+    	  sleep_ms(100);
+      }
+      if((x >= -0.005) && (x <= 0.005) && (y >= 0.005) && (y <= 0.020)){
+    	  led_p->write(0, 1);
+    	  led_p->write(0, 2);
+    	  led_p->write(0, 3);
+    	  led_p->write(1, 4);
+    	  sleep_ms(100);
+      }
    }
 
 }
